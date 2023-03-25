@@ -12,5 +12,8 @@ func _physics_process(_delta):
 	print(input_direction)
 	
 	# update velocity
+	velocity = input_direction * move_speed
 	
 	# move and slide 
+	move_and_slide()
+	# move_and_collide()
