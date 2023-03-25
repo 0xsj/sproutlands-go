@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bch18ossewoij"]
+
+[ext_resource type="Script" path="res://Characters/player_cat.gd" id="1_luxna"]
+[ext_resource type="Texture2D" uid="uid://cpg1vxflkah6f" path="res://art/sprites-pack/Characters/Basic Charakter Spritesheet.png" id="1_npl2w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pv3jf"]
+size = Vector2(13.5, 6.5)
+
+[node name="PlayerCat" type="CharacterBody2D"]
+script = ExtResource("1_luxna")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_npl2w")
+hframes = 4
+vframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5)
+shape = SubResource("RectangleShape2D_pv3jf")
